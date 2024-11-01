@@ -1,71 +1,36 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Playfair Display', serif;
     margin: 0;
-    padding: 20px;
-    background-image: url("Imagenes/Fondodeprueba.jpg"); /* Ruta correcta para el fondo */
-    background-size: cover; /* Cubre todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-}
-
-header {
-    background: linear-gradient(135deg, rgba(128, 0, 128, 0.9), rgba(255, 215, 0, 0.8)); /* Degradado morado y dorado */
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
-    font-size: 2.5em; /* Tamaño de fuente más grande */
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
     padding: 0;
-    text-align: center;
 }
 
-nav ul li {
+.header-banner {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-list li {
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.services-images {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
+.service-item {
+    text-align: center;
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con un poco más de opacidad */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.service-image {
+    max-width: 100%;
+    height: auto;
 }
-
-section {
-    margin-bottom: 20px;
-    text-align: left;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco para las secciones */
-    border-radius: 5px; /* Bordes redondeados para las secciones */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra sutil para las secciones */
-}
-
-footer {
-    text-align: left;
-    padding: 10px 0;
-    background: #333; /* Fondo oscuro para el pie de página */
-    color: white;
-}
-
