@@ -1,23 +1,29 @@
+/* styles.css */
+
+/* Configuración básica de fondo y fuente general */
 body {
-    background-image: url("https://dgssama.github.io/RentAMed/Imagenes/Fondodeprueba.jpg"); /* Cambia esta URL por la dirección de tu imagen */
-    background-size: cover; /* Ajusta la imagen al tamaño del fondo */
-    background-position: center; /* Centra la imagen */
-    color: #FFD700; /* Color de texto dorado */
-    font-family: 'Playfair Display', serif; /* Fuente */
+    background-image: url("D:\Xaamp\htdocs\RentAMed\Imagenes\Fondodeprueba.jpg"); /* Cambia esta URL por la dirección de tu imagen */
+    background-size: cover; 
+    background-position: center; 
+    color: #333; /* Color de texto general */
+    font-family: 'Playfair Display', serif; 
     margin: 0;
 }
 
+/* Header */
 .header-banner {
     background-color: #800080; /* Morado */
-    color: #FFD700; /* Dorado */
+    color: #FFD700; /* Dorado para el texto */
     padding: 20px;
     text-align: center;
 }
 
+/* Encabezados (h1, h2, h3) */
 h1, h2, h3 {
-    color: #FFD700; /* Dorado */
+    color: #FFD700; /* Texto dorado */
 }
 
+/* Menú de navegación */
 .nav-list {
     list-style: none;
     padding: 0;
@@ -38,10 +44,12 @@ h1, h2, h3 {
     color: #fff; /* Cambia a blanco al pasar el cursor */
 }
 
+/* Contenido principal */
 main {
     padding: 20px;
 }
 
+/* Sección de Servicios */
 .services-images {
     display: flex;
     justify-content: space-around;
@@ -56,9 +64,10 @@ main {
 .service-image {
     width: 200px; /* Tamaño de las imágenes */
     height: auto;
-    border: 2px solid #800080; /* Borde morado */
+    border: 2px solid #000; /* Borde negro */
 }
 
+/* Footer */
 footer {
     background-color: #800080; /* Morado */
     color: #FFD700; /* Dorado */
