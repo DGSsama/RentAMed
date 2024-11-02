@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Rent a Med</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .catalog-section {
+            margin: 20px 0;
+        }
+        .image-gallery {
+            position: relative;
+            display: inline-block;
+            width: 300px; /* Ancho máximo */
+        }
+        .gallery-image {
+            width: 100%;
+            display: none; /* Ocultar imágenes por defecto */
+        }
+        .gallery-image.active {
+            display: block; /* Mostrar la imagen activa */
+        }
+        .gallery-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .control-button {
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-banner">
+        <h1>Catálogo - Rent a Med</h1>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalog-section">
+            <h2>Camillas</h2>
+            <h3>Camillas Manuales</h3>
+            <div class="image-gallery">
+                <img src="Imagenes/camilla_k2k_p2.png" alt="Camilla Manual 1" class="gallery-image active">
+                <img src="Imagenes/camilla_k2k_p3.png" alt="Camilla Manual 2" class="gallery-image">
+                <div class="gallery-controls">
+                    <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
+                    <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
+                </div>
+                <p class="specifications">Especificaciones de la camilla manual 1...</p>
+            </div>
+
+            <h3>Camillas Eléctricas</h3>
+            <div class="image-gallery">
+                <img src="Imagenes/CamaElectrica.png" alt="Camilla Eléctrica 1" class="gallery-image active">
+                <img src="Imagenes/Camilla_electricap2.png" alt="Camilla Eléctrica 2" class="gallery-image">
+                <div class="gallery-controls">
+                    <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
+                    <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
+                </div>
+                <p class="specifications">Especificaciones de la camilla eléctrica 1...</p>
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <h2>Sillas de Ruedas</h2>
+            <div class="image-gallery">
+                <img src="Imagenes/SillaDeRuedas1.jpeg" alt="Silla de Ruedas 1" class="gallery-image active">
+                <img src="Imagenes/silladeruedas2.jpeg" alt="Silla de Ruedas 2" class="gallery-image">
+                <div class="gallery-controls">
+                    <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
+                    <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
+                </div>
+                <p class="specifications">Especificaciones de la silla de ruedas 1...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rent a Med. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Script para cambiar imágenes en la galería
+        function changeImage(button, direction) {
+            const gallery = button.parentElement.parentElement; // Accede a la galería actual
+            const images = gallery.querySelectorAll('.gallery-image');
+            const specifications = gallery.querySelector('.specifications');
+            let currentImageIndex = Array.from(images).findIndex(image => image.classList.contains('active'));
+
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            images[currentImageIndex].classList.add('active');
+
+            // Actualiza las especificaciones según la imagen activa
+            specifications.textContent = `Especificaciones de ${images[currentImageIndex].alt}`; // Actualiza aquí según sea necesario
+        }
+    </script>
+</body>
+</html>
