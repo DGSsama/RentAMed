@@ -2,12 +2,15 @@ body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .header-banner {
-    background-color: #f8f9fa;
+    background-color: #4CAF50; /* Verde más vibrante */
+    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .nav-list {
@@ -20,17 +23,50 @@ body {
     margin: 0 15px;
 }
 
-.services-images {
-    display: flex;
-    justify-content: space-around;
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #4CAF50; /* Mismo verde para encabezados */
+    text-align: center;
     margin: 20px 0;
 }
 
+ul {
+    padding-left: 20px;
+}
+
+.services-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .service-item {
+    margin: 15px;
     text-align: center;
 }
 
 .service-image {
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
