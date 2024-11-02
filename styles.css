@@ -1,8 +1,11 @@
 /* styles.css */
 
 body {
-    font-family: 'Playfair Display', serif;
-    background-color: #f4f4f4; /* Color de fondo claro */
+    background-image: url('URL_DE_TU_IMAGEN_AQUI'); /* Cambia esta URL por la dirección de tu imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño del fondo */
+    background-position: center; /* Centra la imagen */
+    color: #FFD700; /* Color de texto dorado */
+    font-family: 'Playfair Display', serif; /* Fuente */
     margin: 0;
 }
 
