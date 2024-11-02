@@ -1,28 +1,42 @@
 /* styles.css */
 
 body {
-    background-image: url("D:\Xaamp\htdocs\RentAMed\Imagenes\Fondodeprueba.jpg"); /* Cambia esta URL por la dirección de tu imagen */
+    background-image: url("Imagenes/Fondo3.jpg");
     background-size: cover;
     background-position: center;
-    color: #333; /* Todo el texto en color oscuro */
+    color: #000; /* Texto más oscuro */
     font-family: 'Playfair Display', serif;
     margin: 0;
+    text-align: center; /* Centra todo el texto */
 }
 
 .header-banner {
-    background: linear-gradient(90deg, #800080, #FFD700); /* Degradado morado a dorado en el banner */
-    color: #333; /* Texto oscuro */
+    background: linear-gradient(90deg, #87CEFA, #FF4500);
+    color: #000; /* Texto oscuro */
     padding: 20px;
-    text-align: center;
 }
 
-h1, h2, h3 {
-    color: #333; /* Encabezados en color oscuro */
+h1, h2 {
+    margin: 0; /* Elimina margen */
+    padding: 10px 0; /* Añade espaciado */
+}
+
+h1 {
+    font-size: 2.5em; /* Aumenta el tamaño del título */
+}
+
+h2 {
+    font-size: 2em; /* Tamaño del subtítulo */
+}
+
+h3 {
+    font-size: 1.5em; /* Tamaño de otros encabezados */
 }
 
 .nav-list {
     list-style: none;
     padding: 0;
+    margin: 20px 0; /* Espaciado superior e inferior */
 }
 
 .nav-list li {
@@ -31,39 +45,52 @@ h1, h2, h3 {
 }
 
 .nav-list a {
-    color: #333; /* Enlaces en color oscuro */
+    color: #000; /* Enlaces en color oscuro */
     text-decoration: none;
+    padding: 5px 10px; /* Añadir espaciado al enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s; /* Efecto de transición */
 }
 
 .nav-list a:hover {
-    text-decoration: underline;
-    color: #555; /* Color ligeramente más claro al pasar el cursor */
+    background: rgba(255, 255, 255, 0.3); /* Fondo blanco al pasar el mouse */
+    color: #000; /* Cambia color al pasar el mouse */
 }
 
 main {
     padding: 20px;
 }
 
+footer {
+    background: linear-gradient(90deg, #FF4500, #FFD700);
+    color: #000; /* Texto oscuro */
+    text-align: center;
+    padding: 10px 0;
+}
+
 .services-images {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Centrar las imágenes */
     flex-wrap: wrap;
+    margin-top: 20px; /* Espacio superior */
 }
 
 .service-item {
     margin: 10px;
     text-align: center;
+    max-width: 300px; /* Ancho máximo para mantener proporciones */
 }
 
 .service-image {
-    width: 200px;
-    height: auto;
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
     border: 2px solid #000000; /* Borde negro */
 }
 
-footer {
-    background: linear-gradient(90deg, #800080, #FFD700); /* Degradado morado a dorado en el footer */
-    color: #333; /* Texto en color oscuro */
-    text-align: center;
-    padding: 10px 0;
+/* Ajuste del tamaño del logo */
+.logo {
+    width: 100px; /* Ajusta el tamaño del logo según lo necesites */
+    height: auto; /* Mantiene la proporción */
+    display: inline-block; /* Para alinearlo correctamente */
+    vertical-align: middle; /* Alineación vertical con el texto */
 }
