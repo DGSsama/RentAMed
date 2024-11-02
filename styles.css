@@ -4,6 +4,7 @@ body {
     background-image: url("Imagenes/Fondo3.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Fondo fijo para cubrir la pantalla */
     color: #000; /* Texto más oscuro */
     font-family: 'Playfair Display', serif;
     margin: 0;
@@ -16,27 +17,29 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
-    margin: 0; /* Elimina margen */
-    padding: 10px 0; /* Añade espaciado */
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #333; /* Color oscuro para mejor contraste */
 }
 
 h1 {
-    font-size: 2.5em; /* Aumenta el tamaño del título */
+    font-size: 2.5em;
 }
 
 h2 {
-    font-size: 2em; /* Tamaño del subtítulo */
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 1.5em; /* Tamaño de otros encabezados */
+    font-size: 1.5em;
+    color: #555; /* Color más claro que h2 */
 }
 
 .nav-list {
     list-style: none;
     padding: 0;
-    margin: 20px 0; /* Espaciado superior e inferior */
+    margin: 20px 0;
 }
 
 .nav-list li {
@@ -45,20 +48,61 @@ h3 {
 }
 
 .nav-list a {
-    color: #000; /* Enlaces en color oscuro */
+    color: #000;
     text-decoration: none;
-    padding: 5px 10px; /* Añadir espaciado al enlace */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background 0.3s; /* Efecto de transición */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 .nav-list a:hover {
-    background: rgba(255, 255, 255, 0.3); /* Fondo blanco al pasar el mouse */
-    color: #000; /* Cambia color al pasar el mouse */
+    background: rgba(0, 0, 0, 0.1); /* Fondo más oscuro para hover */
+    color: #000;
 }
 
 main {
     padding: 20px;
+}
+
+.catalog-section {
+    margin: 20px 0;
+}
+
+.image-gallery {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    margin: 0 auto; /* Centra la galería en el contenedor */
+    text-align: center;
+}
+
+.gallery-image {
+    width: 300px; /* Ancho fijo */
+    height: 200px; /* Altura fija */
+    object-fit: contain; /* Ajustar la imagen sin cortarla */
+    display: none; /* Ocultar imágenes por defecto */
+}
+
+
+.gallery-image.active {
+    display: block; /* Mostrar la imagen activa */
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-button {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
 }
 
 footer {
@@ -70,27 +114,27 @@ footer {
 
 .services-images {
     display: flex;
-    justify-content: center; /* Centrar las imágenes */
+    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px; /* Espacio superior */
+    margin-top: 20px;
 }
 
 .service-item {
     margin: 10px;
     text-align: center;
-    max-width: 300px; /* Ancho máximo para mantener proporciones */
+    max-width: 300px;
 }
 
 .service-image {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción */
-    border: 2px solid #000000; /* Borde negro */
+    width: 100%;
+    height: auto;
+    border: 2px solid #000; /* Borde negro */
 }
 
 /* Ajuste del tamaño del logo */
 .logo {
-    width: 100px; /* Ajusta el tamaño del logo según lo necesites */
-    height: auto; /* Mantiene la proporción */
-    display: inline-block; /* Para alinearlo correctamente */
-    vertical-align: middle; /* Alineación vertical con el texto */
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
 }
