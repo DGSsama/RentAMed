@@ -1,20 +1,24 @@
+/* styles.css */
+
 body {
     font-family: 'Playfair Display', serif;
+    background-color: #f4f4f4; /* Color de fondo claro */
     margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
 .header-banner {
-    background-color: #4CAF50; /* Verde más vibrante */
-    color: white;
+    background-color: #800080; /* Morado */
+    color: #FFD700; /* Dorado */
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
+}
+
+h1, h2, h3 { /* Aplica a todos los encabezados h1, h2 y h3 */
+    color: #FFD700; /* Dorado */
 }
 
 .nav-list {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -24,49 +28,39 @@ body {
 }
 
 .nav-list a {
-    color: white;
+    color: #FFD700; /* Dorado */
     text-decoration: none;
-    font-weight: bold;
 }
 
 .nav-list a:hover {
     text-decoration: underline;
+    color: #fff; /* Cambia a blanco al pasar el cursor */
 }
 
-h2 {
-    color: #4CAF50; /* Mismo verde para encabezados */
-    text-align: center;
-    margin: 20px 0;
-}
-
-ul {
-    padding-left: 20px;
+main {
+    padding: 20px;
 }
 
 .services-images {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .service-item {
-    margin: 15px;
+    margin: 10px;
     text-align: center;
 }
 
 .service-image {
-    max-width: 300px;
+    width: 200px; /* Tamaño de las imágenes */
     height: auto;
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    border: 2px solid #800080; /* Borde morado */
 }
 
 footer {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #800080; /* Morado */
+    color: #FFD700; /* Dorado */
     text-align: center;
     padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
