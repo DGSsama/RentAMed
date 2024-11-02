@@ -1,29 +1,25 @@
 /* styles.css */
 
-/* Configuración básica de fondo y fuente general */
 body {
     background-image: url("D:\Xaamp\htdocs\RentAMed\Imagenes\Fondodeprueba.jpg"); /* Cambia esta URL por la dirección de tu imagen */
-    background-size: cover; 
-    background-position: center; 
-    color: #333; /* Color de texto general */
-    font-family: 'Playfair Display', serif; 
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Color de texto oscuro */
+    font-family: 'Playfair Display', serif;
     margin: 0;
 }
 
-/* Header */
 .header-banner {
-    background-color: #800080; /* Morado */
-    color: #FFD700; /* Dorado para el texto */
+    background: linear-gradient(90deg, #800080 50%, #FFD700 50%); /* Morado y dorado en el banner */
+    color: #333; /* Texto oscuro */
     padding: 20px;
     text-align: center;
 }
 
-/* Encabezados (h1, h2, h3) */
 h1, h2, h3 {
-    color: #FFD700; /* Texto dorado */
+    color: #333; /* Encabezados en color oscuro */
 }
 
-/* Menú de navegación */
 .nav-list {
     list-style: none;
     padding: 0;
@@ -35,7 +31,7 @@ h1, h2, h3 {
 }
 
 .nav-list a {
-    color: #FFD700; /* Dorado */
+    color: #FFD700; /* Dorado para los enlaces */
     text-decoration: none;
 }
 
@@ -44,12 +40,10 @@ h1, h2, h3 {
     color: #fff; /* Cambia a blanco al pasar el cursor */
 }
 
-/* Contenido principal */
 main {
     padding: 20px;
 }
 
-/* Sección de Servicios */
 .services-images {
     display: flex;
     justify-content: space-around;
@@ -62,15 +56,14 @@ main {
 }
 
 .service-image {
-    width: 200px; /* Tamaño de las imágenes */
+    width: 200px;
     height: auto;
-    border: 2px solid #000; /* Borde negro */
+    border: 2px solid #000000; /* Borde negro */
 }
 
-/* Footer */
 footer {
     background-color: #800080; /* Morado */
-    color: #FFD700; /* Dorado */
+    color: #FFD700; /* Texto dorado */
     text-align: center;
     padding: 10px 0;
 }
