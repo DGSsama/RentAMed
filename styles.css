@@ -4,13 +4,13 @@ body {
     background-image: url("D:\Xaamp\htdocs\RentAMed\Imagenes\Fondodeprueba.jpg"); /* Cambia esta URL por la dirección de tu imagen */
     background-size: cover;
     background-position: center;
-    color: #333; /* Color de texto oscuro */
+    color: #333; /* Todo el texto en color oscuro */
     font-family: 'Playfair Display', serif;
     margin: 0;
 }
 
 .header-banner {
-    background: linear-gradient(90deg, #800080 50%, #FFD700 50%); /* Morado y dorado en el banner */
+    background: linear-gradient(90deg, #800080, #FFD700); /* Degradado morado a dorado en el banner */
     color: #333; /* Texto oscuro */
     padding: 20px;
     text-align: center;
@@ -31,13 +31,13 @@ h1, h2, h3 {
 }
 
 .nav-list a {
-    color: #FFD700; /* Dorado para los enlaces */
+    color: #333; /* Enlaces en color oscuro */
     text-decoration: none;
 }
 
 .nav-list a:hover {
     text-decoration: underline;
-    color: #fff; /* Cambia a blanco al pasar el cursor */
+    color: #555; /* Color ligeramente más claro al pasar el cursor */
 }
 
 main {
@@ -62,8 +62,8 @@ main {
 }
 
 footer {
-    background-color: #800080; /* Morado */
-    color: #FFD700; /* Texto dorado */
+    background: linear-gradient(90deg, #800080, #FFD700); /* Degradado morado a dorado en el footer */
+    color: #333; /* Texto en color oscuro */
     text-align: center;
     padding: 10px 0;
 }
