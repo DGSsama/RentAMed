@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Testimonios - Rent a Med</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .header-banner {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav-list li {
+            display: inline;
+            margin: 0 15px;
+        }
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+        }
+        .testimonials-section {
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial {
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin: 15px 0;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        .author {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <header class="header-banner">
+        <h1>Testimonios - Rent a Med</h1>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../servicios.html">Servicios</a></li>
+                <li><a href="../Catalogo/catalogo.html">Catálogo</a></li>
+                <li><a href="../sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="/testimonios/testimonios.html">Testimonios</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="testimonials-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+
+            <div class="testimonial">
+                <p>"Excelente servicio y atención. Las camillas son de alta calidad y han mejorado nuestra práctica médica." 
+                <span class="author">- Dr. Juan Pérez</span></p>
+            </div>
+
+            <div class="testimonial">
+                <p>"Las sillas de ruedas que alquilamos son muy cómodas y el proceso de entrega fue rápido y eficiente." 
+                <span class="author">- María González</span></p>
+            </div>
+
+            <div class="testimonial">
+                <p>"Recomiendo Rent a Med a todos mis colegas. La variedad de equipos es impresionante y siempre están dispuestos a ayudar." 
+                <span class="author">- Lic. Ana Torres</span></p>
+            </div>
+
+            <div class="testimonial">
+                <p>"Desde que trabajamos con Rent a Med, hemos notado una gran diferencia en la satisfacción de nuestros pacientes." 
+                <span class="author">- Dr. Luis Martínez</span></p>
+            </div>
+
+            <h3>Sobre Rent a Med</h3>
+            <p>En Rent a Med, nos dedicamos a proporcionar equipos médicos de alta calidad para mejorar la atención en salud. 
+            Nuestro compromiso es ofrecer un servicio excepcional y productos que cumplan con los más altos estándares de calidad.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rent a Med. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

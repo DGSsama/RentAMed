@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Rent a Med</title>
-    <link rel="stylesheet" href="../styles.css"> <!-- Enlace al CSS general -->
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos específicos adicionales si necesitas ajustar en esta página */
+        /* Ajustes de diseño para mantener un tamaño uniforme y evitar el corte de imágenes */
         .catalog-section {
             margin: 20px;
-            color: #333; /* Asegúrate de que coincida con tu estilo general */
+            color: #333;
         }
         .image-gallery {
             position: relative;
             display: inline-block;
             width: 300px;
-            background-color: #f8f8f8; /* Color de fondo */
+            height: 300px; /* Tamaño fijo para evitar ajuste dinámico */
+            background-color: #f8f8f8;
             border-radius: 8px;
             padding: 10px;
-            border: 1px solid #000; /* Borde negro */
-            margin-bottom: 20px; /* Separación entre camillas */
+            border: 1px solid #000;
+            margin-bottom: 20px;
         }
         .gallery-image {
             width: 100%;
-            display: none; /* Ocultar imágenes por defecto */
+            height: 100%;
+            object-fit: contain; /* Ajuste uniforme de la imagen */
+            display: none;
         }
         .gallery-image.active {
-            display: block; /* Mostrar la imagen activa */
+            display: block;
         }
         .gallery-controls {
             position: absolute;
@@ -47,10 +50,12 @@
             border-radius: 50%;
         }
         .specifications {
-            background-color: #eaeaea; /* Color de fondo para especificaciones */
+            background-color: #eaeaea;
             padding: 10px;
-            border: 1px solid #000; /* Borde negro */
-            margin-top: 10px; /* Margen para separación */
+            border: 1px solid #000;
+            margin-top: 10px;
+            font-size: 0.9em;
+            line-height: 1.6em;
         }
     </style>
 </head>
@@ -76,9 +81,9 @@
             
             <!-- Modelo 1 -->
             <div class="image-gallery" data-specs='[{"nombre": "Camilla Manual K2K", "medidasCamilla": "2115 x 980 mm", "medidasColchon": "1925 x 820 mm", "peso": "200 kg", "inclinacionRespaldar": "0-75°", "inclinacionRodillas": "0-40°"}]'>
-                <img src="../Imagenes/Camilla K2K.png" alt="Camilla Manual Modelo 1 - Imagen 1" class="gallery-image active">
-                <img src="../Imagenes/camillak2kp2.png" alt="Camilla Manual Modelo 1 - Imagen 2" class="gallery-image">
-                <img src="../Imagenes/camillak2kp3.png" alt="Camilla Manual Modelo 1 - Imagen 3" class="gallery-image">
+                <img src="../Imagenes/Camilla K2K.png" alt="Camilla Manual Modelo 1 - Imagen 1" class="gallery-image active" loading="lazy">
+                <img src="../Imagenes/camillak2kp2.png" alt="Camilla Manual Modelo 1 - Imagen 2" class="gallery-image" loading="lazy">
+                <img src="../Imagenes/camillak2kp3.png" alt="Camilla Manual Modelo 1 - Imagen 3" class="gallery-image" loading="lazy">
                 <div class="gallery-controls">
                     <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
                     <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
@@ -90,9 +95,9 @@
 
             <!-- Modelo 2 -->
             <div class="image-gallery" data-specs='[{"nombre": "Camilla Manual K3K", "medidasCamilla": "180 x 65 cm", "medidasColchon": "180 x 65 x 5 cm", "peso": "16 kg", "inclinacionRespaldar": "50°", "inclinacionRodillas": "35°"}]'>
-                <img src="../Imagenes/Camilla k3k.png" alt="Camilla Manual Modelo 2 - Imagen 1" class="gallery-image active">
-                <img src="../Imagenes/K3Kp2.png" alt="Camilla Manual Modelo 2 - Imagen 2" class="gallery-image">
-                <img src="../Imagenes/k3kp3.png" alt="Camilla Manual Modelo 2 - Imagen 3" class="gallery-image">
+                <img src="../Imagenes/Camilla k3k.png" alt="Camilla Manual Modelo 2 - Imagen 1" class="gallery-image active" loading="lazy">
+                <img src="../Imagenes/K3Kp2.png" alt="Camilla Manual Modelo 2 - Imagen 2" class="gallery-image" loading="lazy">
+                <img src="../Imagenes/k3kp3.png" alt="Camilla Manual Modelo 2 - Imagen 3" class="gallery-image" loading="lazy">
                 <div class="gallery-controls">
                     <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
                     <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
@@ -104,7 +109,7 @@
 
             <!-- Modelo 3 -->
             <div class="image-gallery" data-specs='[{"nombre": "Camilla Manual Plana MF3S", "medidasCamilla": "2120 x 960 x 500", "medidasColchon": "2050 x 1000 x 200", "peso": "45 kg", "inclinacionRespaldar": "10°"}]'>
-                <img src="../Imagenes/CAMILLA MANUAL PLANA.png" alt="Camilla Manual Modelo 3" class="gallery-image active">
+                <img src="../Imagenes/CAMILLA MANUAL PLANA.png" alt="Camilla Manual Modelo 3" class="gallery-image active" loading="lazy">
                 <div class="gallery-controls">
                     <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
                     <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
@@ -116,9 +121,9 @@
 
             <h3>Camillas Eléctricas</h3>
             <div class="image-gallery" data-specs='[{"nombre": "Camilla Eléctrica A6K", "medidasCamilla": "2110 x 960 x 400-710 mm", "medidasColchon": "1925 x 820 mm", "peso": "200 kg", "inclinacionRespaldar": "0-75°", "inclinacionRodillas": "0-35°"}]'>
-                <img src="../Imagenes/CamaElectrica.png" alt="Camilla Eléctrica Modelo 1" class="gallery-image active">
-                <img src="../Imagenes/Camilla electricap2.png" alt="Camilla Eléctrica Modelo 1 - Imagen 2" class="gallery-image">
-                <img src="../Imagenes/camillaelectricap3.png" alt="Camilla Eléctrica Modelo 1 - Imagen 3" class="gallery-image">
+                <img src="../Imagenes/CamaElectrica.png" alt="Camilla Eléctrica Modelo 1" class="gallery-image active" loading="lazy">
+                <img src="../Imagenes/Camilla electricap2.png" alt="Camilla Eléctrica Modelo 1 - Imagen 2" class="gallery-image" loading="lazy">
+                <img src="../Imagenes/camillaelectricap3.png" alt="Camilla Eléctrica Modelo 1 - Imagen 3" class="gallery-image" loading="lazy">
                 <div class="gallery-controls">
                     <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
                     <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
@@ -130,21 +135,8 @@
 
             <h3>Sillas de Ruedas</h3>
             <div class="image-gallery" data-specs='[{"nombre": "Silla de Ruedas Modelo 1", "peso": "13 kg", "capacidadCarga": "120 kg", "ancho": "60 cm"}, {"nombre": "Silla de Ruedas Modelo 2", "peso": "15 kg", "capacidadCarga": "140 kg", "ancho": "65 cm"}]'>
-                <img src="../Imagenes/SillaDeRuedas1.jpeg" alt="Silla de Ruedas Modelo 1" class="gallery-image active">
-                <img src="../Imagenes/silladeruedas2.jpeg" alt="Silla de Ruedas Modelo 2" class="gallery-image">
-                <div class="gallery-controls">
-                    <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
-                    <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
-                </div>
-                <p class="specifications"></p>
-                <p>Precio de alquiler: ₡30.000</p>
-                <p>Precio de compra: $Y.YY</p>
-            </div>
-
-            <h3>Tanques de Oxígeno</h3>
-            <div class="image-gallery" data-specs='[{"nombre": "Tanque de Oxígeno Modelo 1", "capacidad": "10 litros", "peso": "8 kg"}, {"nombre": "Tanque de Oxígeno Modelo 2", "capacidad": "15 litros", "peso": "12 kg"}]'>
-                <img src="../Imagenes/TanqueDeOxigeno.jpg" alt="Tanque de Oxígeno Modelo 1" class="gallery-image active">
-                <img src="../Imagenes/tanque2.png" alt="Tanque de Oxígeno Modelo 2" class="gallery-image">
+                <img src="../Imagenes/SillaDeRuedas1.jpeg" alt="Silla de Ruedas Modelo 1" class="gallery-image active" loading="lazy">
+                <img src="../Imagenes/silladeruedas2.jpeg" alt="Silla de Ruedas Modelo 2" class="gallery-image" loading="lazy">
                 <div class="gallery-controls">
                     <button class="control-button" onclick="changeImage(this, -1)">&#10094;</button>
                     <button class="control-button" onclick="changeImage(this, 1)">&#10095;</button>
@@ -160,26 +152,29 @@
         function changeImage(button, direction) {
             const gallery = button.closest('.image-gallery');
             const images = gallery.querySelectorAll('.gallery-image');
-            const specsContainer = gallery.querySelector('.specifications');
-            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + direction + images.length) % images.length;
-            images[currentIndex].classList.add('active');
+            let activeIndex = Array.from(images).findIndex(image => image.classList.contains('active'));
 
-            // Actualizar especificaciones
-            const specs = JSON.parse(gallery.dataset.specs);
-            const currentSpecs = specs[currentIndex];
-            specsContainer.innerHTML = Object.entries(currentSpecs).map(([key, value]) => `<strong>${key.replace(/([A-Z])/g, ' $1').toLowerCase()}: </strong>${value}`).join('<br>');
+            images[activeIndex].classList.remove('active');
+            activeIndex = (activeIndex + direction + images.length) % images.length;
+            images[activeIndex].classList.add('active');
+            
+            updateSpecifications(gallery, activeIndex);
         }
 
-        // Iniciar con la primera imagen activa y las especificaciones
-        document.querySelectorAll('.image-gallery').forEach(gallery => {
-            const images = gallery.querySelectorAll('.gallery-image');
-            const specsContainer = gallery.querySelector('.specifications');
-            const specs = JSON.parse(gallery.dataset.specs);
-            const currentSpecs = specs[0];
-            specsContainer.innerHTML = Object.entries(currentSpecs).map(([key, value]) => `<strong>${key.replace(/([A-Z])/g, ' $1').toLowerCase()}: </strong>${value}`).join('<br>');
-        });
+        function updateSpecifications(gallery, index) {
+            const specsData = JSON.parse(gallery.getAttribute('data-specs'));
+            const specifications = gallery.querySelector('.specifications');
+            specifications.innerHTML = `
+                <strong>${specsData[index].nombre}</strong><br>
+                Medidas camilla: ${specsData[index].medidasCamilla || 'N/A'}<br>
+                Medidas colchón: ${specsData[index].medidasColchon || 'N/A'}<br>
+                Peso: ${specsData[index].peso || 'N/A'}<br>
+                Inclinación de respaldo: ${specsData[index].inclinacionRespaldar || 'N/A'}<br>
+                Inclinación de rodillas: ${specsData[index].inclinacionRodillas || 'N/A'}
+            `;
+        }
+
+        document.querySelectorAll('.image-gallery').forEach(gallery => updateSpecifications(gallery, 0));
     </script>
 </body>
 </html>
